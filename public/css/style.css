@@ -1,0 +1,27 @@
+html { background-color: #EBEBEB; }
+p, h2, h3, h4, h5, h6 { font-family: 'Molengo', arial, serif; margin: 0 0 10px 0; color: #444; }
+h2 { border-bottom: 1px solid #BBB; }
+a { color: #D14; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.gist-meta { display: none; }
+.container { width: 960px; margin: 0 auto; }
+.module { margin: 0 5px; }
+#header { padding: 40px 0; }
+#header .module { height: 100px; position: relative; }
+#title, #subtitle { font-family: 'Neucha', arial, serif; margin: 0; position: absolute; bottom: 0; text-shadow: 2px 2px 2px #aaa; }
+#title { font-size: 85px; line-height: 80px; }
+#subtitle { font-size: 35px; font-weight: normal; color: #666; }
+#downloads p { text-align: left; padding-top: 5px; }
+#downloads p span { font-size: 40px; position: relative; top: 10px; color: #444; text-shadow: 0 -1px 1px #000; }
+#downloads img { vertical-align: middle; }
+#footer .module { margin-top: 100px; background-color: #DDD; width:425px;}
+#footer span { padding: 4px 10px; line-height: 19px; font-family: 'Molengo', arial, serif; font-size:14px; }
+#footer a { font-family: 'Molengo', arial, serif; font-size:18px; }
+
+@media all and (max-device-width: 480px) {
+  .container { width: 100%; }
+  #header { padding: 10px 0 20px 0;}
+  #header .module { height: 1%; }
+  #title, #subtitle { position: relative; }
+  #subtitle { font-size: 34px; }
+}
