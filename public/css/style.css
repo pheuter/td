@@ -9,7 +9,7 @@ a:hover { text-decoration: underline; }
 #header { padding: 40px 0; }
 #header .module { height: 100px; position: relative; }
 #title, #subtitle { font-family: 'Neucha', arial, serif; margin: 0; position: absolute; bottom: 0; text-shadow: 2px 2px 2px #aaa; }
-#title { font-size: 85px; line-height: 80px; }
+#title { font-size: 80px; line-height: 80px; }
 #subtitle { font-size: 35px; font-weight: normal; color: #666; }
 #downloads p { text-align: left; padding-top: 5px; }
 #downloads p span { font-size: 40px; position: relative; top: 10px; color: #444; text-shadow: 0 -1px 1px #000; }
