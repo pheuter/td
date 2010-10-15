@@ -1,4 +1,4 @@
-# &lt;td/&gt; (*tower defense*)
+# &lt;td /&gt; (*tower defense*)
 
 A realtime multiplayer tower defense game built entirely on web technology
 
@@ -14,4 +14,4 @@ Web browser that supports HTML5, CSS3, and has Javascript enabled.
 
 ## Mozilla < Game_On >
 
-&lt;td/&gt; will be participating in the Mozilla [< Game_On >](https://gaming.mozillalabs.com/) gaming contest.
+&lt;td /&gt; will be participating in the Mozilla [< Game_On >](https://gaming.mozillalabs.com/) gaming contest.
