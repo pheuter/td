@@ -1,1 +1,58 @@
-
+:javascript
+  window.onload = function() {
+    var dims = {width: 1000, height: 300};
+    var paper = Raphael("map",dims.width,dims.height);
+    
+    enemy = function(x,y) {
+      var w = 20; var h = 20;
+      var e = paper.rect(x,y,w,h);
+      e.x = x;e.y = y;
+      e.attr({
+        fill:"#00f", 
+        stroke:"#fff",
+        "fill-opacity":1
+      });
+      e.animate({
+        "fill-opacity":1
+      },300);
+      e.click(function() {
+        e.animate({
+          "x": x + w/2,
+          "y": y+h/2, 
+          width: 0, 
+          height: 0, 
+          rotation: 360,
+          "fill-opacity": 0
+        },300);
+        enemy(Math.random()*dims.width,Math.random()*dims.height);
+      });
+    };
+    
+    tower = function(x,y) {
+      var t = paper.set();
+      t.x = x; t.y = y;
+      t.push(
+        paper.rect(x-12.5,y-12.5,25,25,8),
+        paper.rect(x,y-2,20,4)
+      );
+      t.attr({
+        fill: "#f00",
+        stroke: "#fff"
+      });
+      return t;
+    };
+    
+    var towers = [tower(50,50),tower(100,200)];
+    
+    for(i = 0;i < 5;++i)
+      enemy(Math.random()*dims.width,Math.random()*dims.height);
+      
+    $("#map").click(function(e) {
+      towers.forEach(function (t) {
+        var dx = e.pageX - $("#map").offset().left - t.x;
+        var dy = e.pageY - $("#map").offset().top - t.y;
+        var angle = 180*Math.atan2(dy,dx)/Math.PI;
+        t.animate({rotation:angle+" "+t.x+" "+t.y},100); 
+      });
+    });
+  };
